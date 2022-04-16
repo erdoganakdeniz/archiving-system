@@ -39,19 +39,4 @@ public class UserController {
         );
     }
 
-    @PostMapping
-    public ResponseEntity<User> saveUser(@RequestBody User user, HttpServletRequest request){
-        if(user != null)
-            try {
-                userService.save(user);
-                return new ResponseEntity<User>(
-                        user,
-                        headerGenerator.getHeadersForSuccessPostMethod(request,user.getId()),
-                        HttpStatus.CREATED);
-            }catch (Exception e) {
-                e.printStackTrace();
-                return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
-        return new ResponseEntity<User>(HttpStatus.BAD_REQUEST);
-    }
 }
