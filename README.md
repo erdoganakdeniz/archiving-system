@@ -120,6 +120,17 @@ Build etmek için
         "address": "Antalya"
 }
 ````
+#### İstenen Müşteri Kaydını Güncellemek İçin
+
+```http
+  PUT /customer/{customerId}
+```
+
+#### İstenen Müşteri Kaydını Silmek İçin
+
+```http
+  DELETE /customer/{customerId}
+```
 ## File Endpoint
 #### Tüm Dosyaları Getirmek İçin
 
@@ -181,3 +192,14 @@ Build etmek için
         }
     }
 ````
+#### İstenen Dosya Kaydını Güncellemek İçin
+
+```http
+  PUT /file/{fileId}
+```
+
+#### İstenen Dosya Kaydını Silmek İçin
+
+```http
+  DELETE /file/{fileId}
+```
